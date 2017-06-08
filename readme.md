@@ -15,7 +15,7 @@ To set these variables when compiling use a BASH Script so as:
 	PRODUCT="short-name"
 	APP_NAME="Long product name"
 	PKG="solutionbase.co.uk/xldflags"
-	go build -o $PRODUCT -ldflags "-X $PKG.VERSION=$VERSION -X $PKG.PRODUCT=$PRODUCT -X $PKG.APP_NAME=$APP_NAME" *.go
+	go build -o $PRODUCT -ldflags "-X '$PKG.VERSION=$VERSION' -X '$PKG.PRODUCT=$PRODUCT' -X '$PKG.APP_NAME=$APP_NAME'" *.go
 
 In your go packages, you can access the fields like so:
 
